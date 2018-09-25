@@ -1,0 +1,21 @@
+Buffer perfeito
+
+Base de dados: 10.000 imagens para treinamento de uma rede neural
+Buffer contendo no máximo 10000 imagens ou 100% da base de dados, após 100.000 consultas, 10.00% não estavam presentes no buffer, pois o buffer começa vazio
+Buffer contendo no máximo 5000 imagens ou 50% da base de dados, após 100.000 consultas, 23.72% não estavam presentes no buffer
+Buffer contendo no máximo 1000 imagens ou 10% da base de dados, após 100.000 consultas, 60.14% não estavam presentes no buffer
+Buffer contendo no máximo 500 imagens ou 5% da base de dados, após 100.000 consultas, 71.02% não estavam presentes no buffer
+Buffer contendo no máximo 100 imagens ou 1% da base de dados, após 100.000 consultas, 86.88% não estavam presentes no buffer
+Buffer contendo no máximo 10 imagens ou 0.1% da base de dados, após 100.000 consultas, 96.50% não estavam presentes no buffer
+Buffer contendo no máximo 2 imagens ou 0.02% da base de dados, após 100.000 consultas, 99.23% não estavam presentes no buffer
+Buffer contendo no máximo 1 imagem ou 0.01% da base de dados, após 100.000 consultas, 99.99% não estavam presentes no buffer
+
+Base de dados: todas as 60.000 imagens do mnist para treinamento de uma rede neural
+Buffer contendo no máximo 10000 imagens ou 16.667% da base de dados, após 100.000 consultas, 57.78% não estavam presentes no buffer
+Buffer contendo no máximo 5000 imagens ou 8.333% da base de dados, após 100.000 consultas, 66.77% não estavam presentes no buffer
+Buffer contendo no máximo 1000 imagens ou 1.667% da base de dados, após 100.000 consultas, 83.44% não estavam presentes no buffer
+Buffer contendo no máximo 500 imagens ou 0.833% da base de dados, após 100.000 consultas, 88.02% não estavam presentes no buffer
+Buffer contendo no máximo 100 imagens ou 0.167% da base de dados, após 100.000 consultas, 94.64% não estavam presentes no buffer
+Buffer contendo no máximo 10 imagens ou 0.016% da base de dados, após 100.000 consultas, 98.57% não estavam presentes no buffer
+Buffer contendo no máximo 2 imagens ou 0.003% da base de dados, após 100.000 consultas, 99.67% não estavam presentes no buffer
+Buffer contendo no máximo 1 imagem ou 0.0017% da base de dados, após 100.000 consultas, 99.99% não estavam presentes no buffer
