@@ -3,8 +3,9 @@ import random
 from collections import deque
 import math
 
-bufferSize = 1000
+bufferSize = 100
 totalSetSize = 10000 #len(mnist.trainImages)
+queries = 100000
 accesses = deque()
 nextAccess = []
 buffer = {}
@@ -45,9 +46,8 @@ def getTest():
 
     return x, y
 
-prepareBuffer(100001)
-for i in range(100001):
+prepareBuffer(queries)
+for i in range(queries):
     getTest()
-    if i % 1000 == 0:
-        print(mnist.accesses, i)
-
+print('Buffer contendo no máximo ', bufferSize, ' imagens ou ', 100*bufferSize/totalSetSize, \
+            '% da base de dados, após ', queries, ' consultas, ', 100*mnist.accesses/queries, '% não estavam presentes no buffer.', sep='')
