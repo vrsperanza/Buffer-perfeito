@@ -8,6 +8,7 @@ totalSetSize = 10000 #len(mnist.trainImages)
 accesses = deque()
 nextAccess = []
 buffer = {}
+maxTimeInBuffer = -1
 
 for i in range(totalSetSize):
     nextAccess.append(deque())
@@ -19,6 +20,7 @@ def prepareBuffer(totalAccesses):
         nextAccess[id].append(i)
 
 def getTest():
+    global maxTimeInBuffer
     id = accesses.popleft()
     accessTime = nextAccess[id].popleft()
     if len(nextAccess[id]) > 0:
@@ -34,11 +36,12 @@ def getTest():
 
     if nextAccessTime != math.inf and len(buffer) < bufferSize:
         buffer[nextAccessTime] = x, y
+        maxTimeInBuffer = max(maxTimeInBuffer, nextAccessTime)
     elif nextAccessTime != math.inf:
-        maxAccessTime = max(buffer, key=int)
-        if maxAccessTime > nextAccessTime:
-            del buffer[maxAccessTime]
+        if maxTimeInBuffer > nextAccessTime:
+            del buffer[maxTimeInBuffer]
             buffer[nextAccessTime] = x, y
+            maxTimeInBuffer = nextAccessTime
 
     return x, y
 
