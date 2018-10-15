@@ -8,6 +8,7 @@ import tempfile
 import random
 import numpy as np
 
+# Interpreta um documento no formato IDX (formato das imagens do mnist)
 path = 'Images/'
 def parse_idx(fd):
 	DATA_TYPES = {0x08: 'B',  # unsigned byte
@@ -19,17 +20,18 @@ def parse_idx(fd):
 	
 	header = fd.read(4)
 
-	zeros, data_type, num_dimensions = struct.unpack('>HBB', header)
+	_, data_type, num_dimensions = struct.unpack('>HBB', header)
 	data_type = DATA_TYPES[data_type]
 	dimension_sizes = struct.unpack('>' + 'I' * num_dimensions, fd.read(4 * num_dimensions))
 
 	data = array.array(data_type, fd.read())
 	data.byteswap()
 
-	expected_items = functools.reduce(operator.mul, dimension_sizes)
+	if(len(dimension_sizes) == 3):
+		return np.array(data).reshape((dimension_sizes[0], dimension_sizes[1] * dimension_sizes[2]))
+	else:
+		return np.array(data).reshape(dimension_sizes)
 
-	return np.array(data).reshape(dimension_sizes)
-	
 def trainingImages():
 	return parse_idx(open(path + 'train-images.idx3-ubyte', 'rb'))
 def trainingLabels():
@@ -45,6 +47,7 @@ testImages = testingImages()
 testLabels = testingLabels()
 accesses = 0
 
+# Recupera a amostra de id dado e conta um acesso direto a database
 def getTrainingSample(id):
 	global accesses
 	accesses += 1

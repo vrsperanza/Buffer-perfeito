@@ -19,3 +19,77 @@ Buffer contendo no máximo 100 imagens ou 0.167% da base de dados, após 100.000
 Buffer contendo no máximo 10 imagens ou 0.016% da base de dados, após 100.000 consultas, 98.57% não estavam presentes no buffer
 Buffer contendo no máximo 2 imagens ou 0.003% da base de dados, após 100.000 consultas, 99.67% não estavam presentes no buffer
 Buffer contendo no máximo 1 imagem ou 0.0017% da base de dados, após 100.000 consultas, 99.99% não estavam presentes no buffer
+
+--------------------------------------------------------
+
+Treino da rede neural com diferentes tamanhos de buffer:
+
+Precisão da rede neural: 0.8877
+
+Buscas: 100000
+Colisões no buffer: 51425
+Frequencia de colisão no buffer: 0.51425
+
+Tamanho do buffer: 60000
+Tamanho da database: 60000
+Tamanho do buffer / Tamanho da database: 1.0
+
+--------------------------------------------------------
+
+Precisão da rede neural: 0.8947
+
+Buscas: 100000
+Colisões no buffer: 29254
+Frequencia de colisão no buffer: 0.29254
+
+Tamanho do buffer: 6000
+Tamanho da database: 60000
+Tamanho do buffer / Tamanho da database: 0.1
+
+--------------------------------------------------------
+
+Precisão da rede neural: 0.8787
+
+Buscas: 100000
+Colisões no buffer: 29111
+Frequencia de colisão no buffer: 0.29111
+
+Tamanho do buffer: 6000
+Tamanho da database: 60000
+Tamanho do buffer / Tamanho da database: 0.1
+
+--------------------------------------------------------
+
+Precisão da rede neural: 0.8667
+
+Buscas: 100000
+Colisões no buffer: 7167
+Frequencia de colisão no buffer: 0.07167
+
+Tamanho do buffer: 600
+Tamanho da database: 60000
+Tamanho do buffer / Tamanho da database: 0.01
+
+--------------------------------------------------------
+
+Precisão da rede neural: 0.8873
+
+Buscas: 100000
+Colisões no buffer: 1817
+Frequencia de colisão no buffer: 0.01817
+
+Tamanho do buffer: 60
+Tamanho da database: 60000
+Tamanho do buffer / Tamanho da database: 0.001
+
+--------------------------------------------------------
+
+Precisão da rede neural: 0.8981
+
+Buscas: 100000
+Colisões no buffer: 555
+Frequencia de colisão no buffer: 0.00555
+
+Tamanho do buffer: 6
+Tamanho da database: 60000
+Tamanho do buffer / Tamanho da database: 0.0001
