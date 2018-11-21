@@ -73,8 +73,18 @@ Referências
 Sistemas Operacionais Modernos - 4º Edição - ANDREW S., TANENBAUM HERBERT.  
 The MNIST database of handwritten digits.  
 Tensor Flow, estimators guide.  
+  
 Anexo 1:  
-Para executar o código basta descompactar o arquivo zip em uma pasta e executar o arquivo NeuralNetwork.py, este deve treinar a rede implementada usando o buffer e então imprimir resultados como os presentes ao final do arquivo report.txt.  
+Para executar esse código é necessário ter python 3.6 com os módulos numpy e tensorflow.  
+Os comandos para instalar os módulos são os seguintes:  
+pip install tensorflow  
+e  
+pip install numpy  
+  
+Para executar o código basta descompactar o arquivo zip em uma pasta e executar o arquivo NeuralNetwork.py usando python 3 com os módulos numpy e tensor flow, este deve treinar a rede implementada usando o buffer e então imprimir resultados como os presentes ao final do arquivo report.txt  
+  
+Para instalar os módulos tensorflow e numpy basta usar os comandos:  
   
 O número de execuções de treino e o tamanho dos minibatchs pode ser modificado no começo do arquivo NeyralNetwork.py  
-O arquivo mnistbuffer.py contem o buffer e suas especificações, que lá podem ser alteradas, entre elas o tamanho do grupo para   treinamento, o número de imagens que cabem dentro do buffer e o número total de acessos que será feito ao buffer.  
+O arquivo mnistbuffer.py contem o buffer e suas especificações, que lá podem ser alteradas, entre elas o tamanho do grupo para   treinamento, o número de imagens que cabem dentro do buffer e o número total de acessos que será feito ao buffer  
+  
