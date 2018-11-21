@@ -1,3 +1,4 @@
+Trabalho de Sistemas Operacionais - SCC0140, 2 semestre, 2018
 Buffer perfeito para treinamento de redes neurais
  
 Nome: Vitor Rossi Speranza                       nº Usp: 10262523
