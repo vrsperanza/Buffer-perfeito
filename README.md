@@ -1,10 +1,3 @@
-Trabalho de Sistemas Operacionais - SCC0140, 2 semestre, 2018
-Buffer perfeito para treinamento de redes neurais
- 
-Nome: Vitor Rossi Speranza           nº Usp: 10262523  
-Nome: Miguel de Mattos Gardini     		nº Usp: 10295728  
-Nome: Bruno Del Monde				            nº Usp: 10262818  
-
 Resumo  
 A proposta do trabalho é implementar e testar uma implementação de buffer perfeito, tendo como aplicação alvo o treinamento de redes neurais, situação onde, mesmo na vida real, com pouca preparação especial, pode-se saber quais serão as imagens acessadas no futuro, permitindo assim a aplicação do buffer perfeito.  
 Tal buffer pode acelerar o treinamento de uma rede neural que depende de uma base de dados muito grande e não consegue coloca-lá inteira na memória ram em um momento qualquer.  
